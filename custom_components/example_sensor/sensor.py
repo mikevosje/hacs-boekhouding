@@ -6,7 +6,7 @@ from homeassistant.components.sensor import (
     SensorEntity,
     SensorStateClass,
 )
-from homeassistant.const import TEMP_CELSIUS
+from homeassistant.const import TIME_HOURS
 from homeassistant.core import HomeAssistant
 from homeassistant.helpers.entity_platform import AddEntitiesCallback
 from homeassistant.helpers.typing import ConfigType, DiscoveryInfoType
@@ -25,10 +25,10 @@ def setup_platform(
 class ExampleSensor(SensorEntity):
     """Representation of a Sensor."""
 
-    _attr_name = "Example Temperature"
-    _attr_native_unit_of_measurement = TEMP_CELSIUS
-    _attr_device_class = SensorDeviceClass.TEMPERATURE
-    _attr_state_class = SensorStateClass.MEASUREMENT
+    _attr_name = "Hours"
+    _attr_native_unit_of_measurement = TIME_HOURS
+    _attr_device_class = SensorDeviceClass.NONE
+    _attr_state_class = SensorStateClass.NONE
 
     def update(self) -> None:
         """Fetch new state data for the sensor.
