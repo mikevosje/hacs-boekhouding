@@ -53,10 +53,11 @@ class Boekhouding(DataUpdateCoordinator):
             name="Boekhouding Hours",
             # Polling interval. Will only be polled if there are subscribers.
             update_interval=timedelta(seconds=30),
+            update_method=async_update_data
         )
         self._session = session
 
-    async def _async_update_data(self):
+    async def async_update_data(self):
         """Fetch data from API endpoint.
 
         This is the place to pre-process the data to lookup tables

@@ -34,9 +34,9 @@ class BoekhoudingSensor(SensorEntity):
         """Fetch new state data for the sensor.
 
         Update the data from the portal."""
-        dataurl = "https://boekhouding.wappz.nl/api/ha/hours"
-        self.data = ET.parse(urlopen(dataurl)).getroot()
-        _LOGGER.debug("Data = %s", self.data)
+        # dataurl = "https://boekhouding.wappz.nl/api/ha/hours"
+        # self.data = ET.parse(urlopen(dataurl)).getroot()
+        # _LOGGER.debug("Data = %s", self.data)
 
         """This is the only method that should fetch new data for Home Assistant."""
         self._attr_native_value = 23
