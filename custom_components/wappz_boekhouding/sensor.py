@@ -1,5 +1,6 @@
 """Platform for sensor integration."""
 from __future__ import annotations
+import logging
 
 from homeassistant.components.sensor import (
     SensorDeviceClass,
@@ -31,7 +32,11 @@ class BoekhoudingSensor(SensorEntity):
     _attr_state_class = SensorStateClass.MEASUREMENT
 
     def update(self) -> None:
+        _LOGGER.debug("Data = %s", self.data)
+
         """Fetch new state data for the sensor.
+        
+        
 
         Update the data from the portal."""
         # dataurl = "https://boekhouding.wappz.nl/api/ha/hours"
