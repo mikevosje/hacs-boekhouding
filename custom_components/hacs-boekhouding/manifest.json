@@ -1,9 +1,9 @@
 {
-  "domain": "wappz_boekhouding",
-  "name": "Boekhouding",
-  "documentation": "",
+  "domain": "example_sensor",
+  "name": "Example Sensor",
+  "documentation": "https://github.com/home-assistant/example-custom-config/tree/master/custom_components/example_sensor/",
   "dependencies": [],
-  "codeowners": ["@mikevosje"],
+  "codeowners": [],
   "requirements": [],
   "iot_class": "local_polling",
   "version": "0.1.0"

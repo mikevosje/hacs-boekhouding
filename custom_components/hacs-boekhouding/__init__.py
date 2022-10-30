@@ -1,1 +1,1 @@
-"""Boekhouding integration."""
+"""The example sensor integration."""
