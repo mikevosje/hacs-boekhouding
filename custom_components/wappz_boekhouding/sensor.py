@@ -32,7 +32,7 @@ class BoekhoudingSensor(SensorEntity):
     _attr_state_class = SensorStateClass.MEASUREMENT
 
     def update(self) -> None:
-        _LOGGER.debug("Data = %s", self.data)
+        logging.debug("Data = %s", self.data)
 
         """Fetch new state data for the sensor.
         
