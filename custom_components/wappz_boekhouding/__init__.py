@@ -8,7 +8,7 @@ import socket
 import aiohttp
 import async_timeout
 
-from .api import PollenApi
+from .api import BoekhoudingAPI
 from homeassistant.core import callback
 from homeassistant.exceptions import ConfigEntryAuthFailed
 from homeassistant.helpers.update_coordinator import (
@@ -16,8 +16,6 @@ from homeassistant.helpers.update_coordinator import (
     DataUpdateCoordinator,
     UpdateFailed,
 )
-
-from .const import DOMAIN
 
 _LOGGER = logging.getLogger(__name__)
 
