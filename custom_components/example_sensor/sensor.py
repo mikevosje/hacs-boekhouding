@@ -27,8 +27,8 @@ class ExampleSensor(SensorEntity):
 
     _attr_name = "Hours"
     _attr_native_unit_of_measurement = TIME_HOURS
-    _attr_device_class = SensorDeviceClass.NONE
-    _attr_state_class = SensorStateClass.NONE
+    _attr_device_class = SensorDeviceClass.DURATION
+    _attr_state_class = SensorStateClass.MEASUREMENT
 
     def update(self) -> None:
         """Fetch new state data for the sensor.
